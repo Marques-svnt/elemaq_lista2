@@ -29,28 +29,9 @@ Este programa realiza a análise de diferentes configurações de eixos mecânic
 ## Instruções de Execução
 
 1.  **Compilação do Código C:**
-    Compile todos os arquivos `.c` para gerar o executável `programa.exe`. Um exemplo de comando de compilação usando GCC seria:
-    ```bash
-    gcc main.c q1.c q2.c q3.c q4.c -o programa.exe -lm
-    ```
-    (O `-lm` é para linkar a biblioteca matemática, se necessário).
+    Executar setup.bat
 
-2.  **Estrutura de Arquivos Esperada:**
-    Para o correto funcionamento, espera-se a seguinte estrutura de arquivos e pastas no diretório onde `programa.exe` será executado:
-    ```
-    .
-    ├── programa.exe        <-- Seu programa compilado
-    ├── requirements.txt    <-- Arquivo com as dependências Python
-    ├── src/                <-- Pasta contendo o script Python
-    │   └── diagram.py
-    └── output/             <-- Será criada pelo programa C (se não existir)
-        └── ...             (conterá respostas.txt e dados.txt)
-    └── diagramas/          <-- Será criada pelo script Python (se não existir)
-        └── ...             (conterá as imagens dos diagramas)
-    ```
-    * Certifique-se de que a pasta `src/` existe e contém o script `diagram.py`.
-
-3.  **Executando o Programa:**
+2.  **Executando o Programa:**
     * Após a compilação bem-sucedida, execute `programa.exe`.
     * No Windows, você pode clicar duas vezes no arquivo ou executá-lo via Prompt de Comando:
         ```bash
@@ -61,7 +42,7 @@ Este programa realiza a análise de diferentes configurações de eixos mecânic
         ./programa.exe
         ```
 
-4.  **Saídas do Programa:**
+3.  **Saídas do Programa:**
     * O `programa.exe` criará (ou sobrescreverá) a pasta `output/` e, dentro dela:
         * `respostas.txt`: Contém as respostas textuais detalhadas, cálculos e resultados para cada questão analisada.
         * `dados.txt`: Contém os dados numéricos formatados para cada questão, utilizados pelo script Python para gerar os diagramas.
@@ -71,15 +52,14 @@ Este programa realiza a análise de diferentes configurações de eixos mecânic
 ## Funcionamento Detalhado
 
 1.  O `programa.exe` é iniciado.
-2.  Ele cria o diretório `output/` (se não existir).
-3.  Abre os arquivos `output/respostas.txt` e `output/dados.txt` para escrita.
-4.  Processa cada uma das questões (`q1` a `q4`):
+2.  Abre os arquivos `respostas.txt` e `dados.txt` para escrita.
+3.  Processa cada uma das questões (`q1` a `q4`):
     * Calcula torques, forças, reações e outros dados relevantes.
     * Escreve os resultados textuais em `output/respostas.txt`.
     * Escreve os dados numéricos para os diagramas em `output/dados.txt`, formatados conforme esperado pelo script Python.
-5.  Fecha os arquivos `respostas.txt` e `dados.txt`.
-6.  Chama o script `src/diagram.py`, passando o caminho `output/dados.txt` como argumento.
-7.  O script `diagram.py`:
+4.  Fecha os arquivos `respostas.txt` e `dados.txt`.
+5.  Chama o script `src/diagram.py`, passando o caminho `output/dados.txt` como argumento.
+6.  O script `diagram.py`:
     * Lê os dados de `output/dados.txt`.
     * Cria o diretório `diagramas/` (se não existir).
     * Para cada questão encontrada no arquivo de dados, gera os 5 diagramas de esforços (Cortante Vy, Momento Mz, Cortante Vz, Momento My, Torque T).
