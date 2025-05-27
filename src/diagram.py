@@ -167,13 +167,10 @@ if __name__ == "__main__":
         # Ou, se executado da raiz do projeto, 'output/dados.txt'
         # Para maior robustez, o C deve SEMPRE passar o argumento.
         # Este fallback assume que o script é executado da raiz do projeto.
-        nome_arquivo_dados = os.path.join("output", "dados.txt")
-        print(f"AVISO: Nenhum caminho de arquivo de dados fornecido como argumento.")
-        print(f"       Tentando o caminho padrão: '{nome_arquivo_dados}'")
+        nome_arquivo_dados = "dados.txt"
         # Verificação adicional se o caminho padrão existe, para ajudar na depuração
         if not os.path.exists(nome_arquivo_dados):
              alt_path = "dados.txt" # Tenta no diretório atual do script
-             print(f"AVISO: Caminho padrão '{nome_arquivo_dados}' não encontrado. Tentando '{alt_path}' no diretório atual.")
              if os.path.exists(alt_path):
                  nome_arquivo_dados = alt_path
              else:
