@@ -1,0 +1,169 @@
+--- Questao 1 ---
+
+a) Magnitude do torque no eixo em todos os pontos;
+b) Forcas nos elementos transmissores de potencia;
+c) Reacoes nos rolamentos;
+d) Diagramas de carga, cisalhamento e momento fletor.
+
+Torque no Eixo (T_BD):
+  T = (30.0 hp * 63000.0 / 550.0 rpm) = 3436.36 lb.in  (388.26 N.m)
+  Este torque atua entre a Engrenagem B (entrada) e a Polia D (saida).
+  Torque T_AB (antes de B) = 0 lb.in (0 N.m)
+  Torque T_DC (depois de D) = 0 lb.in (0 N.m)
+
+Forcas nos Elementos de Transmissao:
+Engrenagem B (recebe potencia, pinhão externo acima):
+  Diametro Primitivo (D_gearB): 16.00 in (0.4064 m)
+  Forca Tangencial no eixo (F_Bz): 429.55 lb (1910.71 N) (Horizontal)
+  Forca Radial no eixo (F_By): -156.34 lb (-695.44 N) (Vertical para Baixo)
+
+Polia D (transmite potencia):
+  Diametro da Polia D: 10.00 in (0.2540 m)
+  Forca Resultante Total na Polia (F_poliaD): 1030.91 lb (4585.71 N) (estimada com fator 1.5)
+  Componente Vertical da Forca (F_Dy): -789.72 lb (-3512.86 N) (Para Baixo)
+  Componente Horizontal da Forca (F_Dz): 662.66 lb (2947.64 N) (Para Direita)
+
+Reacoes nos Mancais (Mancal em A em x=0.0 in, Mancal em C em x=26.0 in):
+  Plano Vertical (XY):
+    R_Ay = 278.45 lb (1238.62 N)
+    R_Cy = 667.61 lb (2969.68 N)
+  Plano Horizontal (XZ):
+    R_Az = -417.26 lb (-1856.05 N)
+    R_Cz = -674.94 lb (-3002.30 N)
+
+Dados para os diagramas (em SI) foram escritos em dados.txt.
+--- Fim da Questao 1 ---
+
+
+--- Questao 2 ---
+
+Refazendo a Questao 1 com novos parametros:
+  Potencia: 20.0 HP, Rotacao: 750 RPM
+  Engrenagem B: 100 dentes, Passo Diametral 6
+  Polia D: Diametro 9.0 in (0.2286 m)
+
+a) Magnitude do Torque no Eixo (T_BD):
+  T = (20.0 hp * 63000.0 / 750 rpm) = 1680.00 lb.in  (189.81 N.m)
+  Este torque atua entre a Engrenagem B (entrada) e a Polia D (saida).
+  Torque T_AB (antes de B) = 0 lb.in (0 N.m)
+  Torque T_DC (depois de D) = 0 lb.in (0 N.m)
+
+b) Forcas nos Elementos de Transmissao:
+Engrenagem B (Questao 2 - recebe potencia, pinhão externo acima):
+  Diametro Primitivo (D_gearB): 16.67 in (0.4233 m)
+  Forca Tangencial no eixo devido ao pinhão (F_Bz): 201.60 lb (896.76 N) (Horizontal)
+  Forca Radial no eixo devido ao pinhão (F_By): -73.38 lb (-326.39 N) (Vertical para Baixo)
+
+Polia D (Questao 2 - transmite potencia):
+  Diametro da Polia D: 9.00 in (0.2286 m)
+  Forca Resultante Total na Polia (F_poliaD): 560.00 lb (2491.00 N) (estimada com fator 1.5)
+  Componente Vertical da Forca (F_Dy): -428.98 lb (-1908.22 N) (Para Baixo)
+  Componente Horizontal da Forca (F_Dz): 359.96 lb (1601.19 N) (Para Direita)
+
+c) Reacoes nos Mancais (Mancal em A em x=0.0 in, Mancal em C em x=26.0 in):
+  Plano Vertical (XY):
+    R_Ay = 144.15 lb (641.22 N)
+    R_Cy = 358.21 lb (1593.40 N)
+  Plano Horizontal (XZ):
+    R_Az = -207.13 lb (-921.36 N)
+    R_Cz = -354.43 lb (-1576.59 N)
+
+Dados para os diagramas (em SI) foram escritos em dados.txt.
+--- Fim da Questao 2 ---
+
+
+--- Questao 3 ---
+
+a) Torques nos Componentes e no Eixo:
+  Torque na Polia A (T_A_entrada): 3150.00 lb.in (355.90 N.m)
+  Torque de Saida na Engrenagem C (T_C_saida): 1890.00 lb.in (213.54 N.m)
+  Torque de Saida na Roda Dentada D (T_D_saida): 1260.00 lb.in (142.36 N.m)
+
+  Diagrama de Torque no Eixo:
+    Segmento A (x=0.0) a B (x=5.0): T_AB = 3150.00 lb.in (355.90 N.m)
+    Segmento B (x=5.0) a C (x=13.0): T_BC = 3150.00 lb.in (355.90 N.m)
+    Segmento C (x=13.0) a D (x=21.0): T_CD = 1260.00 lb.in (142.36 N.m)
+    Segmento D (x=21.0) a E (x=26.0): T_DE = 0.00 lb.in (0.00 N.m) (deve ser ~0)
+
+b) Forcas nos Elementos de Transmissao (atuando sobre o eixo):
+  Polia A (x=0.0 in / 0.000 m, Entrada):
+    Diametro: 20.00 in (0.5080 m)
+    F_Ay = 735.00 lb (3269.44 N) (Vertical para Cima)
+    F_Az = 0.00 lb (0.00 N)
+  Engrenagem C (x=13.0 in / 0.330 m, Saida):
+    Diametro Primitivo: 10.00 in (0.2540 m)
+    F_Cy (tangencial) = 378.00 lb (1681.43 N) (Vertical para Cima)
+    F_Cz (radial)     = 137.58 lb (611.99 N) (Horizontal +Z)
+  Roda Dentada D (x=21.0 in / 0.533 m, Saida):
+    Diametro: 6.00 in (0.1524 m)
+    F_Dy = -420.00 lb (-1868.25 N) (Vertical para Baixo)
+    F_Dz = 0.00 lb (0.00 N)
+
+c) Reacoes nos Mancais (Mancal B em x=5.0 in, Mancal E em x=26.0 in):
+  Plano Vertical (XY):
+    R_By = -1044.00 lb (-4643.94 N)
+    R_Ey = 351.00 lb (1561.33 N)
+  Plano Horizontal (XZ):
+    R_Bz = -85.17 lb (-378.85 N)
+    R_Ez = -52.41 lb (-233.14 N)
+
+
+d) Calculo dos Diametros Minimos do Eixo (em polegadas, com equivalentes SI):
+   (Usando Sn_linha_padrao = 19278 psi (132.92 MPa), Sy = 58000 psi (399.90 MPa), N = 2.5)
+  Ponto A (Polia, x=0.0 in): M_res=0.00 lb.in, T=3150.00 lb.in, D_A = 1.062 in (26.97 mm)
+  Ponto B (Mancal, x=5.0 in): M_res=3675.00 lb.in, T=3150.00 lb.in, D_B = 2.302 in (58.46 mm) (sn'=19278 psi)
+  Ponto C (Engrenagem, x=13.0 in): M_res=1382.55 lb.in, T=1260.00 lb.in, D_C = 1.544 in (39.23 mm)
+  Ponto D (Roda Dentada, x=21.0 in): M_res=1774.46 lb.in, T=0.00 lb.in, D_D = 1.674 in (42.51 mm)
+  Ponto E (Mancal, x=26.0 in): V_res=354.89 lb, D_E = 0.582 in (14.77 mm) (por cisalhamento)
+
+Dados para os diagramas (em SI) foram escritos em dados.txt.
+--- Fim da Questao 3 ---
+
+
+--- Questao 4 ---
+
+a) Magnitude do Torque no Eixo:
+  Torque Saida Engrenagem B (T_B): 656.25 lb.in (74.15 N.m)
+  Torque Saida Polia D (T_D): 393.75 lb.in (44.49 N.m)
+  Torque Saida Polia E (T_E): 393.75 lb.in (44.49 N.m)
+  Torque Entrada Corrente C (T_C_entrada): 1443.75 lb.in (163.12 N.m)
+  Torque no segmento A-B (x=0.0 a 5.0 in): 0.00 lb.in (0.00 N.m)
+  Torque no segmento B-C (x=5.0 a 13.0 in): 656.25 lb.in (74.15 N.m)
+  Torque no segmento C-D (x=13.0 a 20.0 in): 787.50 lb.in (88.98 N.m)
+  Torque no segmento D-E (x=20.0 a 26.0 in): 393.75 lb.in (44.49 N.m)
+  Torque no segmento E-F (x=26.0 a 31.0 in): 0.00 lb.in (0.00 N.m) (deve ser ~0)
+
+b) Forcas nos Elementos Transmissores de Potencia (atuando sobre o eixo):
+  Engrenagem B (x=5.0 in / 0.127 m):
+    Forca Vertical (F_By - Radial): 159.24 lb (708.32 N) (Para Cima)
+    Forca Horizontal (F_Bz - Tangencial): 437.50 lb (1946.10 N) (Sentido +Z)
+  Corrente C (x=13.0 in / 0.330 m):
+    Forca Vertical (F_Cy): -278.91 lb (-1240.66 N) (Para Baixo)
+    Forca Horizontal (F_Cz): -74.73 lb (-332.43 N) (Para Esquerda, -Z)
+  Polia D (x=20.0 in / 0.508 m):
+    Forca Vertical (F_Dy): -255.75 lb (-1137.62 N) (Para Baixo)
+    Forca Horizontal (F_Dz): 147.66 lb (656.81 N) (Para Direita, +Z)
+  Polia E (x=26.0 in / 0.660 m):
+    Forca Vertical (F_Ey): 0.00 lb (0.00 N)
+    Forca Horizontal (F_Ez): 295.31 lb (1313.62 N) (Para Direita, +Z)
+
+c) Reacoes nos Rolamentos (Mancais A em x=0.0 in, F em x=31.0 in):
+  Mancal A:
+    Reacao Vertical (R_Ay): 119.14 lb (529.98 N)
+    Reacao Horizontal (R_Az): -423.57 lb (-1884.12 N)
+  Mancal F:
+    Reacao Vertical (R_Fy): 256.28 lb (1139.98 N)
+    Reacao Horizontal (R_Fz): -382.17 lb (-1699.97 N)
+
+
+d) Momentos Fletores Resultantes e Diametros Minimos para o Eixo:
+   (Usando Sn_linha = 29160 psi (201.05 MPa), Sy = 80000 psi (551.58 MPa), N = 2.5, Kt_anel = 3.0)
+  Ponto B (x=5.0 in): M_res = 2200.02 lb.in (248.57 N.m), T = 656.25 lb.in (74.15 N.m), D_min = 1.793 in (45.55 mm)
+  Ponto C (x=13.0 in): M_res = 3463.17 lb.in (391.29 N.m), T_adj_max = 787.50 lb.in (88.98 N.m), D_min = 2.086 in (52.98 mm)
+  Ponto D (x=20.0 in): M_res = 3723.12 lb.in (420.66 N.m), T = 393.75 lb.in (44.49 N.m), D_min = 2.137 in (54.27 mm)
+  Ponto E (x=26.0 in): M_res = 2300.71 lb.in (259.95 N.m), T = 0.00 lb.in (0.00 N.m), D_min = 1.820 in (46.23 mm)
+
+Dados para os diagramas (em SI) foram escritos em dados.txt.
+--- Fim da Questao 4 ---
+
+
