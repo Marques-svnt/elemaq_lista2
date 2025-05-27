@@ -24,14 +24,25 @@ int main()
     fclose(arquivo_respostas);
     fclose(arquivo_dados);
 
-    int status = system("python src/diagram.py");
-    if (status != 0)
+    int status_diagram = system("python src/diagram.py");
+    if (status_diagram != 0)
     { // Simplificando, qualquer status diferente de 0 é um problema
-        fprintf(stderr, "O script Python retornou um erro (status: %d).\n", status);
+        fprintf(stderr, "O script Python retornou um erro (status: %d).\n", status_diagram);
         fprintf(stderr, "Isso pode ser devido a dependencias Python ausentes (matplotlib, numpy).\n");
         fprintf(stderr, "Por favor, certifique-se de que Python 3 esta instalado e execute:\n");
         fprintf(stderr, "pip install matplotlib numpy\n");
+        fprintf(stderr, "Ou execute o setup.bat\n");
+    }
+
+    int status_pdf = system("python src/pdf.py");
+    if (status_pdf != 0)
+    { // Simplificando, qualquer status diferente de 0 é um problema
+        fprintf(stderr, "O script Python retornou um erro (status: %d).\n", status_pdf);
+        fprintf(stderr, "Isso pode ser devido a dependencias Python ausentes (fpdf2, pillow).\n");
+        fprintf(stderr, "Por favor, certifique-se de que Python 3 esta instalado e execute:\n");
+        fprintf(stderr, "pip install fpdf2 pillow\n");
         fprintf(stderr, "Ou use o arquivo: pip install -r requirements.txt\n");
+        fprintf(stderr, "Ou execute o setup.bat\n");
     }
     return 0;
 }
