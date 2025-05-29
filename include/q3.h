@@ -40,12 +40,19 @@ void q3(FILE *fp_respostas, FILE *fp_dados);
 #define Q3_X_D 21.0 // Roda Dentada D
 #define Q3_X_E 26.0 // Mancal E
 
-// Propriedades do Material (Imperial)
-#define Q3_S_U_PSI 69000.0
-#define Q3_S_Y_PSI 58000.0
-#define Q3_S_N_SURF_PSI 28000.0
-#define Q3_C_RELIAB_99 0.81
-#define Q3_FATOR_PROJETO_N 2.5
+// --- Propriedades do Material do Eixo (Aco SAE 1117 Estirado a Frio) ---
+// Estimadas conforme relatorio e material de apoio [1]
+#define Q3_S_U_PSI 69000.0       // Resistencia a tracao ultima (Ultimate Tensile Strength, Su) em psi.
+                                 // Valor típico para SAE 1117 estirado a frio.
+#define Q3_S_Y_PSI 58000.0       // Tensao de escoamento (Yield Strength, Sy) em psi.
+                                 // Valor típico para SAE 1117 estirado a frio.
+#define Q3_S_N_SURF_PSI 28000.0  // Limite de resistencia a fadiga basico (Sn) em psi,
+                                 // JA CONSIDERANDO um acabamento superficial de "usinada ou trefilada a frio".
+                                 // Estimado a partir da Figura 5.8 do material de apoio [1] para Su ~69 ksi.
+#define Q3_C_RELIAB_99 0.81      // Fator de confiabilidade (CR) para 99% de confiabilidade.
+                                 // Obtido da Tabela 5.2 do material de apoio.[1]
+#define Q3_FATOR_PROJETO_N 2.5   // Fator de seguranca de projeto (N).
+                                 // Escolhido para um nível moderado de incerteza, conforme sugestão no material de apoio.[1]
 
 // Kt (Adimensional)
 #define Q3_KT_POLIA_A 2.0

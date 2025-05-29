@@ -50,14 +50,23 @@ void q4(FILE *fp_respostas, FILE *fp_dados);
 #define Q4_X_E 26.0 // Polia E
 #define Q4_X_F 31.0 // Mancal F
 
-// Propriedades do Material (SAE 1137 OQT 1300) e Projeto (Imperial)
-#define Q4_S_U_PSI 105000.0
-#define Q4_S_Y_PSI 80000.0
-#define Q4_S_N_BASE_PSI 45000.0
-#define Q4_C_SIZE 0.80
-#define Q4_C_RELIAB_99 0.81
-#define Q4_FATOR_PROJETO_N 2.5
-#define Q4_KT_ANEL_RETENCAO 3.0
+// --- Propriedades do Material (SAE 1137 OQT 1300) e Projeto (Imperial) ---
+// Estimadas conforme material de apoio [1] e dados típicos
+#define Q4_S_U_PSI 105000.0      // Resistencia a tracao ultima (Ultimate Tensile Strength, Su) em psi.
+                                 // Valor típico para SAE 1137 OQT 1300.
+#define Q4_S_Y_PSI 80000.0       // Tensao de escoamento (Yield Strength, Sy) em psi.
+                                 // Valor típico para SAE 1137 OQT 1300.
+#define Q4_S_N_BASE_PSI 45000.0  // Limite de resistencia a fadiga basico (Sn) em psi,
+                                 // para uma superfície "usinada ou trefilada a frio".
+                                 // Estimado a partir da Figura 5.8 do material de apoio [1] para Su ~105 ksi.
+#define Q4_C_SIZE 0.80           // Fator de tamanho (Cs) para corrigir o limite de fadiga.
+                                 // Estimativa inicial baseada na Figura 5.9 do material de apoio [1] para diâmetros esperados.
+#define Q4_C_RELIAB_99 0.81      // Fator de confiabilidade (CR) para 99% de confiabilidade.
+                                 // Obtido da Tabela 5.2 do material de apoio.[1]
+#define Q4_FATOR_PROJETO_N 2.5   // Fator de seguranca de projeto (N).
+                                 // Escolhido para um nível moderado de incerteza.
+#define Q4_KT_ANEL_RETENCAO 3.0  // Fator de concentracao de tensao teorico (Kt) para canais de anel de retencao.
+                                 // Estimativa baseada em recomendações para projeto de eixos.[1]
 
 // Estrutura para forcas (em lb)
 typedef struct {
