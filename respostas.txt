@@ -1,9 +1,10 @@
 --- Questao 1 ---
 
+Material do Eixo: Aco SAE 1040 Estirado a Frio
 a) Magnitude do torque no eixo em todos os pontos;
 b) Forcas nos elementos transmissores de potencia;
 c) Reacoes nos rolamentos;
-d) Diagramas de carga, cisalhamento e momento fletor.
+d) Diagramas de carga, cisalhamento, momento fletor e calculo de diametros.
 
 Torque no Eixo (T_BD):
   T = (30.0 hp * 63000.0 / 550.0 rpm) = 3436.36 lb.in  (388.26 N.m)
@@ -30,6 +31,11 @@ Reacoes nos Mancais (Mancal em A em x=0.0 in, Mancal em C em x=26.0 in):
   Plano Horizontal (XZ):
     R_Az = -417.26 lb (-1856.05 N)
     R_Cz = -674.94 lb (-3002.30 N)
+
+Calculo dos Diametros Minimos do Eixo (Aco SAE 1040 Estirado a Frio):
+   (Usando Sn_linha = 26163 psi (180.39 MPa), Sy = 71000 psi (489.53 MPa), N = 2.5)
+  Ponto B (Engrenagem, x=10.0 in): M_res=5016.37 lb.in, T=3436.36 lb.in, Kt=2.0, D_B = 2.142 in (54.40 mm)
+  Ponto D (Polia, x=20.0 in): M_res=5696.06 lb.in, T=3436.36 lb.in, Kt=2.0, D_D = 2.233 in (56.73 mm)
 
 Dados para os diagramas (em SI) foram escritos em dados.txt.
 --- Fim da Questao 1 ---
@@ -67,6 +73,29 @@ c) Reacoes nos Mancais (Mancal em A em x=0.0 in, Mancal em C em x=26.0 in):
   Plano Horizontal (XZ):
     R_Az = -207.13 lb (-921.36 N)
     R_Cz = -354.43 lb (-1576.59 N)
+
+e) Calculo dos Diametros Minimos do Eixo (Aco SAE 1040 Estirado a Frio):
+   Material: Aco SAE 1040 Estirado a Frio
+     Su = 85000 psi (586.1 MPa)
+     Sy = 71000 psi (489.5 MPa)
+     Sn (base, usinado/est.frio) ~ 39000 psi (268.9 MPa)
+     Cs = 0.85 (fator de tamanho padrao)
+     CR = 0.81 (para 99% confiabilidade)
+     Sn' (corrigido) = 26852 psi (185.1 MPa)
+   Parametros de Projeto:
+     Fator de Seguranca (N) = 2.5
+  Ponto A (Mancal, x=0.0 in):
+    M_res = 0.00 lb.in (0.00 N.m), T = 0.00 lb.in (0.00 N.m), Kt = 2.5
+    Diametro D_A = 0.000 in (0.00 mm)
+  Ponto B (Engrenagem, x=10.0 in):
+    M_res = 2523.53 lb.in (285.12 N.m), T = 1680.00 lb.in (189.81 N.m), Kt = 2.2
+    Diametro D_B = 1.743 in (44.26 mm)
+  Ponto D (Polia, x=20.0 in):
+    M_res = 3023.52 lb.in (341.61 N.m), T = 1680.00 lb.in (189.81 N.m), Kt = 2.2
+    Diametro D_D = 1.850 in (46.99 mm)
+  Ponto C (Mancal, x=26.0 in):
+    M_res = 0.00 lb.in (0.00 N.m), T = 0.00 lb.in (0.00 N.m), Kt = 2.5
+    Diametro D_C = 0.000 in (0.00 mm)
 
 Dados para os diagramas (em SI) foram escritos em dados.txt.
 --- Fim da Questao 2 ---
